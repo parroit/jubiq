@@ -28,12 +28,17 @@
   "scripts": {
     "test": "gulp test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "virtual-dom": "0.0.21",
+    "is": "~2.1.0",
+    "object-assign": "~1.0.0",
+    "events": "~1.0.2"
+  },
   "devDependencies": {
     "chai": "~1.9.1",
     "gulp": "~3.8.6",
-    "gulp-mocha": "~0.5"
-
+    "gulp-mocha": "~0.5",
+    "gulp-pure-cjs": "~0.1.2"
   },
   "keywords": []
 }
