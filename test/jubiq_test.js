@@ -12,6 +12,9 @@ var chai = require('chai');
 chai.expect();
 chai.should();
 
+var h = require('virtual-dom/h');
+var createElement = require('virtual-dom/create-element');
+
 var u = require('../lib/jubiq.js');
 
 describe('jubiq', function() {
@@ -20,15 +23,14 @@ describe('jubiq', function() {
     });
 
     it('render vdom', function() {
-        var h = require('virtual-dom/h');
-        var createElement = require('virtual-dom/create-element');
-
+        
         var udom = u.nav(/#navbar.beauty/,
             u.ul(
                 u.li( u.a({href:'/a1'},'1') ),
                 u.li( u.a({href:'/a2'},'2') ),
-                u.li( u.a({href:'/a3'},'3') )
-            )
+                u.li( u.a({href:'/a3'},'3') ),
+                null, undefined
+            ),42,true,false
         );
 
         var dom = h('nav', {id: 'navbar',className: 'beauty'},
@@ -39,7 +41,8 @@ describe('jubiq', function() {
                             [h('a',{href:'/a2'},['2'])]),
                         h('li',null,
                             [h('a',{href:'/a3'},['3'])])
-            ])
+            ]),
+            '42truefalse'
         ]);
 
         var rootNode = createElement(dom);

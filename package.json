@@ -22,17 +22,19 @@
   ],
   "main": "lib/jubiq",
   "engines": {
-      "node": ">=0.10.26",
-      "npm": ">=1.4.3"
+    "node": ">=0.10.26",
+    "npm": ">=1.4.3"
   },
   "scripts": {
     "test": "gulp test"
   },
   "dependencies": {
-    "virtual-dom": "0.0.21",
+    "events": "~1.0.2",
     "is": "~2.1.0",
     "object-assign": "~1.0.0",
-    "events": "~1.0.2"
+    "virtual-dom": "0.0.21",
+    "virtual-dom-stringify": "^0.9.0",
+    "virtual-html": "^0.1.0"
   },
   "devDependencies": {
     "chai": "~1.9.1",
